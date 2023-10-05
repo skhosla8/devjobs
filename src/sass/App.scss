@@ -1,0 +1,106 @@
+// abstracts 
+@use './abstracts/variables' as *;
+
+// components 
+@use './components//home';
+@use './components/jobcard';
+@use './components/searchbar';
+@use './components//job';
+@use './components/toggleswitch';
+
+.app {
+    @include flex(column, undefined);
+    width: 800px;
+    height: auto;
+    font-family: 'Kumbh Sans', sans-serif;
+
+    .header {
+        position: relative;
+        background: url('../assets//bg-pattern-header.svg') no-repeat;
+        background-size: contain;
+        height: 90px;
+        @include flex(row, space-between);
+        padding: 0 5rem;
+
+        div {
+            margin-top: -1rem;
+        }
+
+        &__logo {
+            @include flex(row, center);
+
+            img {
+                width: 75px;
+                height: 20px;
+            }
+        }
+
+        &__theme {
+            @include flex(row, center);
+
+            img {
+                width: 15px;
+                height: 15px;
+
+                &:nth-of-type(1) {
+                    margin-right: 0.4rem;
+                }
+
+                &:nth-of-type(2) {
+                    width: 12px;
+                    height: 12px;
+                    margin-left: 0.4rem;
+                }
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-very-dark-blue;
+    }
+
+    button {
+        font-size: 10px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+}
+
+.card-light {
+    background-color: $color-white !important;
+    color: $color-midnight !important;
+}
+
+.card-dark {
+    background-color: $color-very-dark-blue !important;
+    color: $color-white !important;
+}
+
+.body-light {
+    background-color: $color-light-grey !important;
+}
+
+.body-dark {
+    background-color: $color-midnight !important;
+}
+
+.border-dark {
+    border-left: 1px solid $color-dark-grey !important;
+    border-right: 1px solid $color-dark-grey !important;
+}
+
+.border-light {
+    border-left: 1px solid $color-light-grey !important;
+    border-right: 1px solid $color-light-grey !important;
+}
+
+.btn-dark {
+    background-color: #2c333c !important;
+    color: $color-white !important;
+}
+
+.btn-light {
+    background-color: $color-light-grey !important;
+}

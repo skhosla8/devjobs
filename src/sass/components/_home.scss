@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+
+.home {
+    @include flex(column, center);
+    padding-bottom: 3rem;
+
+    &__jobs-container {
+        width: 670px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    button {
+        background-color: $color-violet;
+        color: $color-white;
+    }
+
+    &__load-more {
+        margin: 1rem 0 0;
+        padding: 0.6rem 1.1rem;
+    }
+}

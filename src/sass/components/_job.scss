@@ -1,0 +1,186 @@
+@use '../abstracts/variables' as *;
+
+.job {
+    position: relative;
+    align-self: center;
+    @include flex(column, center);
+    width: 370px;
+
+    &__header {
+        position: relative;
+        top: 0;
+        margin: -1.5rem 0 1.5rem;
+        height: 70px;
+        @include flex(row, flex-start);
+
+        &__logo {
+            @include flex(row, center);
+            width: 75px;
+            height: 75px;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+        }
+
+        &__text {
+            @include flex(row, space-between);
+            width: 300px;
+            padding: 1.3rem;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+
+            div {
+                @include flex(column, flex-start);
+                font-weight: 600;
+                font-size: 13px;
+
+                span {
+                    font-size: 9px;
+                    font-weight: 200;
+                    color: $color-dark-grey;
+                    margin-top: 0.4rem;
+                }
+            }
+
+            button {
+                background-color: $color-light-grey;
+                color: $color-violet;
+                padding: 0.5rem 0.6rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__body {
+        width: 370px;
+        padding: 1.3rem;
+        margin-bottom: 3rem;
+        border-radius: 7px;
+
+        &__heading {
+            @include flex(row, space-between);
+
+            &__postedAt {
+                font-size: 9px;
+                color: $color-dark-grey;
+
+                span {
+                    background-color: $color-dark-grey;
+                    width: 3px;
+                    height: 3px;
+                    margin: 0 0.5rem;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+            }
+
+            &__position {
+                font-weight: 600;
+                font-size: 0.9rem;
+                color: $color-midnight;
+                margin: 0.2rem 0;
+            }
+
+            &__location {
+                color: $color-violet;
+                font-size: 9px;
+                font-weight: 600;
+            }
+
+            button {
+                background-color: $color-violet;
+                color: $color-white;
+                padding: 0.5rem 0.6rem;
+                font-weight: 600;
+            }
+        }
+
+        &__description {
+            font-size: 10px;
+            line-height: 14px;
+            margin: 1.5rem 0;
+        }
+
+        &__requirements {
+            &__content {
+                font-size: 10px;
+                line-height: 14px;
+
+                ul {
+                    list-style: none;
+                    margin-top: 0.6rem;
+
+                    li {
+                        &::before {
+                            content: '\2022';
+                            color: $color-dark-grey;
+                            font-weight: bold;
+                            font-size: 1rem;
+                            display: inline-block;
+                            width: 0.8rem;
+                        }
+
+                        margin: 0.2rem 0;
+                    }
+                }
+            }
+        }
+
+        &__role {
+            margin-top: 1.5rem;
+            font-size: 10px;
+            line-height: 14px;
+
+            ul {
+                list-style: none;
+                margin-top: 0.6rem;
+            }
+
+            &__item {
+                @include flex(row, flex-start);
+                margin: 0.3rem 0;
+
+                span {
+                    margin-right: 0.6rem;
+                    color: $color-violet;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 0.7rem;
+        }
+    }
+
+    &__footer {
+        @include flex(row, center);
+        width: 800px;
+        padding: 1rem 0;
+
+        &__container {
+            @include flex(row, space-between);
+            width: 370px;
+
+            div {
+                font-weight: 600;
+                font-size: 11px;
+
+                div {
+                    color: $color-dark-grey;
+                    font-weight: 200;
+                    font-size: 9px;
+                    margin-top: 0.2rem;
+                }
+            }
+
+            button {
+                background-color: $color-violet;
+                color: $color-white;
+                padding: 0.5rem 0.6rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

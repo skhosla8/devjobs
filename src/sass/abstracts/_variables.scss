@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;600&display=swap');
+
+// primary colors 
+$color-violet: #5964E0;
+$color-light-violet: #939BF4;
+$color-very-dark-blue: #19202D;
+$color-midnight: #121721;
+
+// secondary colors 
+$color-white: #FFFFFF;
+$color-light-grey: #F4F6F8;
+$color-gray: #9DAEC2;
+$color-dark-grey: #6E8098;
+
+// typography
+@mixin font-bold {
+    font-weight: 600;
+}
+
+@mixin font-h1 {
+    @include font-bold;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+@mixin font-h2 {
+    @include font-bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+@mixin font-h3 {
+    @include font-bold;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+@mixin font-h4 {
+    @include font-bold;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+@mixin font-body {
+    font-weight: 200;
+    font-size: 11px;
+    line-height: 26px;
+}
+
+// positioning
+@mixin flex($direction, $position) {
+    display: flex;
+    flex-direction: $direction;
+
+    @if ($direction =='row') {
+        justify-content: $position;
+        align-items: center;
+    }
+
+    @else {
+        align-items: $position;
+    }
+}

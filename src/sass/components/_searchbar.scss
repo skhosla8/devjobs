@@ -1,0 +1,83 @@
+@use '../abstracts/variables' as *;
+
+.searchbar {
+    position: relative;
+    margin-top: -1rem;
+    @include flex(row, center);
+    width: 650px;
+    font-size: 10px;
+    border-radius: 7px;
+    margin-bottom: 3rem;
+
+    &__criterion {
+        @include flex(row, undefined);
+        @include font-bold;
+        padding: 0.8rem;
+        height: 40px;
+
+        input {
+            width: 90%;
+            font-size: 11px;
+            margin-left: 0.5rem;
+            border: none;
+            outline: none;
+            background-color: transparent;
+
+            &::placeholder {
+                font-size: 10.5px;
+                color: #b6b6b6;
+            }
+        }
+
+        &:first-child {
+            width: 320px;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+
+            img {
+                width: 13px;
+                height: 13px;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 200px;
+
+            img {
+                width: 11px;
+                height: 15px;
+            }
+        }
+
+        &:last-child {
+            @include flex(row, space-between);
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+            width: 240px;
+        }
+
+        &__btn {
+            padding: 0.4rem 0.8rem;
+        }
+
+        &__container {
+            @include flex(row, center);
+
+            span {
+                margin-left: 0.5rem;
+            }
+
+            &__checkbox {
+                @include flex(row, center);
+                width: 12px;
+                height: 12px;
+                cursor: pointer;
+
+                img {
+                    width: 9px;
+                    height: 9px;
+                }
+            }
+        }
+    }
+}
