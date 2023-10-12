@@ -14,21 +14,23 @@ const Layout = () => {
 
     return (
         <div className={`app body-${theme}`}>
-            <header className='header'>
-                <NavLink to='/'>
-                    <div className='header__logo'>
-                        <img className='header__logo' src={logo} alt='logo' />
+            <div className='header__container'>
+                <header className='header'>
+                    <NavLink to='/'>
+                        <div className='header__logo'>
+                            <img className='header__logo' src={logo} alt='logo' />
+                        </div>
+                    </NavLink>
+
+                    <div className='header__theme'>
+                        <img src={iconSun} alt='icon-sun' />
+
+                        <ToggleSwitch />
+
+                        <img src={iconMoon} alt='icon-moon' />
                     </div>
-                </NavLink>
-
-                <div className='header__theme'>
-                    <img src={iconSun} alt='icon-sun' />
-
-                    <ToggleSwitch />
-
-                    <img src={iconMoon} alt='icon-moon' />
-                </div>
-            </header>
+                </header>
+            </div>
 
             <Outlet />
         </div>

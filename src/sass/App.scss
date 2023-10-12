@@ -10,20 +10,23 @@
 
 .app {
     @include flex(column, undefined);
-    width: 800px;
+    //width: 800px;
+    width: 100vw;
     height: auto;
     font-family: 'Kumbh Sans', sans-serif;
 
     .header {
         position: relative;
-        background: url('../assets//bg-pattern-header.svg') no-repeat;
+        background: url('../assets//bg-pattern-header.svg') round;
         background-size: contain;
         height: 90px;
         @include flex(row, space-between);
         padding: 0 5rem;
+        border-bottom-left-radius: 12px;
 
-        div {
-            margin-top: -1rem;
+        &__container {
+            background-color: $color-violet;
+            border-bottom-left-radius: 50px;
         }
 
         &__logo {

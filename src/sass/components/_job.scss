@@ -156,7 +156,7 @@
 
     &__footer {
         @include flex(row, center);
-        width: 800px;
+        width: 100vw;
         padding: 1rem 0;
 
         &__container {
