@@ -13,7 +13,7 @@ const JobCard: FC<JobCardProps> = ({ job }) => {
 
     return (
         <NavLink to='job' state={job}>
-            <div className={`jobcard card-${theme}`}>
+            <div className={`jobcard card-${theme}`} data-cy='job-card'>
                 <div className='jobcard__logo-container' style={{ backgroundColor: job.logoBackground }}>
                     <img src={require(`../assets/logos/${job.logo}`)} alt='company-logo' />
                 </div>

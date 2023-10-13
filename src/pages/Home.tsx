@@ -33,9 +33,9 @@ const Home = () => {
                     job.location.toLowerCase() === filteredByLocation.toLowerCase() ?
                         job.location.toLowerCase() === filteredByLocation.toLowerCase() :
                         filteredByLocation.length > 1 ?
-                            job.location.toLowerCase().includes(filteredByLocation) :
+                            job.location.toLowerCase().includes(filteredByLocation.toLowerCase()) :
                             filteredByLocation.length === 1 &&
-                            job.location[0].toLowerCase() === filteredByLocation
+                            job.location[0].toLowerCase() === filteredByLocation.toLowerCase()
                 )
             });
         }
@@ -46,14 +46,14 @@ const Home = () => {
                     return job.company.toLowerCase() === filteredByName.toLowerCase();
                 } else if (job.position.toLowerCase() === filteredByName.toLowerCase()) {
                     return job.position.toLowerCase() === filteredByName.toLowerCase();
-                } else if (filteredByName.length > 1 && job.company.toLowerCase().includes(filteredByName)) {
-                    return job.company.toLowerCase().includes(filteredByName);
-                } else if (filteredByName.length > 1 && job.position.toLowerCase().includes(filteredByName)) {
-                    return job.position.toLowerCase().includes(filteredByName);
-                } else if (filteredByName.length === 1 && job.company[0].toLowerCase() === filteredByName) {
-                    return job.company[0].toLowerCase() === filteredByName;
+                } else if (filteredByName.length > 1 && job.company.toLowerCase().includes(filteredByName.toLowerCase())) {
+                    return job.company.toLowerCase().includes(filteredByName.toLowerCase());
+                } else if (filteredByName.length > 1 && job.position.toLowerCase().includes(filteredByName.toLowerCase())) {
+                    return job.position.toLowerCase().includes(filteredByName.toLowerCase());
+                } else if (filteredByName.length === 1 && job.company[0].toLowerCase() === filteredByName.toLowerCase()) {
+                    return job.company[0].toLowerCase() === filteredByName.toLowerCase();
                 } else {
-                    return job.position[0].toLowerCase() === filteredByName;
+                    return job.position[0].toLowerCase() === filteredByName.toLowerCase();
                 }
             });
         }

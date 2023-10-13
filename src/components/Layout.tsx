@@ -13,7 +13,7 @@ const Layout = () => {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={`app body-${theme}`}>
+        <div className={`app body-${theme}`} data-cy='app-body'>
             <div className='header__container'>
                 <header className='header'>
                     <NavLink to='/'>

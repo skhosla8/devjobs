@@ -115,9 +115,11 @@ const SearchBar: FC<SearchBarProps> = forwardRef<HTMLDivElement, SearchBarProps>
                 <div className={`searchbar__criterion card-${theme}`}>
                     <img src={iconSearch} alt='icon-search' />
                     <input
+                        className={`card-${theme}`}
                         type='text'
                         placeholder='Filter by title, companies, expertise...'
                         name='name'
+                        data-cy='filter-by-name-input'
                         value={value.name}
                         onChange={handleChange}
                     />
@@ -126,9 +128,11 @@ const SearchBar: FC<SearchBarProps> = forwardRef<HTMLDivElement, SearchBarProps>
                 <div className={`searchbar__criterion border-${theme}`}>
                     <img src={iconLocation} alt='icon-location' />
                     <input
+                        className={`card-${theme}`}
                         type='text'
                         placeholder='Filter by location...'
                         name='location'
+                        data-cy='filter-by-location-input'
                         value={value.location}
                         onChange={handleChange}
                     />
@@ -136,7 +140,7 @@ const SearchBar: FC<SearchBarProps> = forwardRef<HTMLDivElement, SearchBarProps>
 
                 <div className='searchbar__criterion'>
                     <div className='searchbar__criterion__container'>
-                        <div ref={ref} className={`searchbar__criterion__container__checkbox`} onClick={handleContract}>
+                        <div ref={ref} className={`searchbar__criterion__container__checkbox`} onClick={handleContract} data-cy='full-time-only-checkbox'>
                             {fullTimeContract &&
                                 <img src={iconCheck} alt='icon-check' />
                             }
@@ -145,7 +149,7 @@ const SearchBar: FC<SearchBarProps> = forwardRef<HTMLDivElement, SearchBarProps>
                         <span>Full Time Only</span>
                     </div>
 
-                    <button className='searchbar__criterion__btn' onClick={handleSearch}>Search</button>
+                    <button className='searchbar__criterion__btn' onClick={handleSearch} data-cy='search-btn'>Search</button>
                 </div>
             </div>
         )

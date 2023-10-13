@@ -14,7 +14,7 @@ const ToggleSwitch = () => {
     }
 
     return (
-        <label className='switch'>
+        <label className='switch' data-cy='color-theme-switch'>
             <input type='checkbox' defaultChecked={theme === 'dark' && true} onChange={handleTheme} />
             <span className='switch__slider'></span>
         </label>
