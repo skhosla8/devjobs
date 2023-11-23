@@ -10,7 +10,6 @@
 
 .app {
     @include flex(column, undefined);
-    //width: 800px;
     width: 100vw;
     height: auto;
     font-family: 'Kumbh Sans', sans-serif;

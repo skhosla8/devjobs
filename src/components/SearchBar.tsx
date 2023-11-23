@@ -1,5 +1,5 @@
 // Base Imports
-import React, { FC, useState, useEffect, ForwardedRef, forwardRef, useContext } from 'react';
+import React, { FC, useState, useEffect, ForwardedRef, forwardRef, useContext, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
 // Icons/Images
@@ -73,8 +73,6 @@ const SearchBar: FC<SearchBarProps> = forwardRef<HTMLDivElement, SearchBarProps>
                     ref.current!.style.backgroundColor = '#5964E0';
 
                 } else {
-                    // ref.current!.style.backgroundColor = '#e7e7e7';
-
                     if (theme === 'light') {
                         ref.current!.style.backgroundColor = '#e7e7e7';
                     } else {
@@ -82,7 +80,6 @@ const SearchBar: FC<SearchBarProps> = forwardRef<HTMLDivElement, SearchBarProps>
                     }
                 }
             }
-
         }, [isFullTime, ref]);
 
         // persist full time checkbox to true if fullTimeContract search param exists 
