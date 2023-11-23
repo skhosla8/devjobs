@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/devjobs/static/css/main.33be2622.css",
-    "main.js": "/devjobs/static/js/main.38e76572.js",
+    "main.css": "/devjobs/static/css/main.8a691a6a.css",
+    "main.js": "/devjobs/static/js/main.9ec605f4.js",
     "static/js/787.648a673e.chunk.js": "/devjobs/static/js/787.648a673e.chunk.js",
     "static/media/logo.svg": "/devjobs/static/media/logo.8c0b644930f3fa038b452bce0d4b876d.svg",
     "static/media/scoot.svg": "/devjobs/static/media/scoot.345a4bfd15e6f589d568.svg",
@@ -23,12 +23,12 @@
     "static/media/icon-location.svg": "/devjobs/static/media/icon-location.325ff3d99912e5505f5cf31f67518b0c.svg",
     "static/media/icon-search.svg": "/devjobs/static/media/icon-search.09900c2e3c8743161876925423fc7460.svg",
     "static/media/icon-check.svg": "/devjobs/static/media/icon-check.7b769ecf9d90157efbc331c220869523.svg",
-    "main.33be2622.css.map": "/devjobs/static/css/main.33be2622.css.map",
-    "main.38e76572.js.map": "/devjobs/static/js/main.38e76572.js.map",
+    "main.8a691a6a.css.map": "/devjobs/static/css/main.8a691a6a.css.map",
+    "main.9ec605f4.js.map": "/devjobs/static/js/main.9ec605f4.js.map",
     "787.648a673e.chunk.js.map": "/devjobs/static/js/787.648a673e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33be2622.css",
-    "static/js/main.38e76572.js"
+    "static/css/main.8a691a6a.css",
+    "static/js/main.9ec605f4.js"
   ]
 }
